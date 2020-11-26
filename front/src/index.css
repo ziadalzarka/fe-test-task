@@ -17,6 +17,12 @@ button {
   font-family: "Squada One", "Helvetica Neue", Helvetica, sans-serif;
 }
 
+@media (max-width: 600px) {
+  body {
+    font-size: 0.75rem;
+  }
+}
+
 .spin {
   animation-name: spin;
   animation-duration: 1.5s;
