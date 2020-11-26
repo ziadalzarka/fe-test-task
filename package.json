@@ -3,11 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "prestart": "npm install",
-    "start": "npm-run-all --parallel start:api start:client",
-    "start:api": "LOGLEVEL=info node .",
-    "start:client": "cd front && npm install && npm start",
-    "dev": "npm install && ./node_modules/.bin/gulp"
+    "start": "cd front && npm start",
+    "build": "cd front && npm install"
   },
   "author": "Flow Health",
   "license": "ISC",
