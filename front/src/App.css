@@ -1,4 +1,5 @@
 .container {
+  position: relative;
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -6,28 +7,6 @@
   align-items: center;
   justify-content: center;
   color: white;
-}
-
-.title {
-  font-size: 3.5em;
-}
-
-.error {
-  font-size: 2em;
-}
-
-.subsection {
-  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-}
-
-.upper-fadeout {
-  opacity: 0;
-  transform: translateY(-100%);
-}
-
-.lower-fadeout {
-  opacity: 0;
-  transform: translateY(100%);
 }
 
 .game-fadein {

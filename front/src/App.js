@@ -1,14 +1,12 @@
-import classNames from "classnames";
 import { useCallback, useState } from "react";
 import { ImSpinner2 } from "react-icons/im";
-import { useQuery } from "react-query";
+import { queryCache, ReactQueryCacheProvider, useQuery } from "react-query";
 import { isServerConnected } from "./api/connected";
 import "./App.css";
-import Board from "./components/Board";
-import PlayButton from "./components/PlayButton";
+import GameMenu from "./components/GameMenu";
+import Game from "./screens/Game";
 
 function App() {
-  const [fadeOut, setFadeOut] = useState(false);
   const [gameStarted, setGameStarted] = useState(false);
 
   const { isLoading, error, data: connected } = useQuery("connected", () =>
@@ -16,8 +14,7 @@ function App() {
   );
 
   const handleStartGame = useCallback(() => {
-    setFadeOut(true);
-    setTimeout(() => setGameStarted(true), 500);
+    setGameStarted(true);
   }, [setGameStarted]);
 
   if (error) {
@@ -40,21 +37,22 @@ function App() {
     return (
       <div className="container">
         <div className="game-fadein">
-          <Board />
+          <Game />
         </div>
       </div>
     );
   }
 
   return (
-    <div className="container">
-      <div className={classNames("subsection", { "upper-fadeout": fadeOut })}>
-        <h1 className="title">Tic Tac Toe</h1>
+    <ReactQueryCacheProvider queryCache={queryCache}>
+      <div className="container">
+        <GameMenu
+          title="Tic Tac Toe"
+          action="Play"
+          onAction={handleStartGame}
+        />
       </div>
-      <div className={classNames("subsection", { "lower-fadeout": fadeOut })}>
-        <PlayButton onClick={handleStartGame}>Play</PlayButton>
-      </div>
-    </div>
+    </ReactQueryCacheProvider>
   );
 }
 

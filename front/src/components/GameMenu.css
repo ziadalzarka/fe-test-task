@@ -1,0 +1,19 @@
+.title {
+  font-size: 3.5em;
+  text-align: center;
+}
+
+.subsection {
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  text-align: center;
+}
+
+.upper-fadeout {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.lower-fadeout {
+  opacity: 0;
+  transform: translateY(100%);
+}
