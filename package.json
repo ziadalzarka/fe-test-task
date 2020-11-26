@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "prestart": "npm install",
-    "start": "npm-run-all start:api start:client",
+    "start": "npm-run-all --parallel start:api start:client",
     "start:api": "LOGLEVEL=info node .",
     "start:client": "cd front && npm install && npm start",
     "dev": "npm install && ./node_modules/.bin/gulp"
