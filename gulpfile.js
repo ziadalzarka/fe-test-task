@@ -60,9 +60,14 @@ gulp.task("app:restart", () => {
   });
 });
 
+gulp.task("client", () => {
+  logger.info("Gulp: starting client");
+  appPID = exec("cd front && npm start", { async: true });
+});
+
 process.on("SIGTERM", () => {
   kill(appPID.pid, null, () => process.exit(0));
   logger.info("App", "stop");
 });
 
-gulp.task("default", gulp.series(["app"]));
+gulp.task("default", gulp.parallel(["app", "client"]));
