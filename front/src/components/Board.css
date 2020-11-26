@@ -10,6 +10,13 @@
   color: white;
 }
 
+@media (max-width: 600px) {
+  .cell {
+    width: 80px;
+    height: 80px;
+  }
+}
+
 .row {
   display: flex;
   flex-direction: row;
