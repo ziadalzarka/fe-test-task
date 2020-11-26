@@ -1,5 +1,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e42f6d31-100b-4af0-8b53-494f1c5d6bb6/deploy-status)](https://app.netlify.com/sites/determined-lovelace-3becad/deploys)
 
+Demo: [https://determined-lovelace-3becad.netlify.app](https://determined-lovelace-3becad.netlify.app)
+
 ## Test assignment for the front-end developer position applicants
 
 This repository contains the back-end component for a game of **tic-tac-toe** against the AI. Your assignment is to develop the front-end.
