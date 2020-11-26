@@ -1,5 +1,5 @@
 const config = {
-  api: process.env.API_URL || "http://localhost:4000/api",
+  api: "https://fe-test-task.herokuapp.com/api",
 };
 
 export default config;
