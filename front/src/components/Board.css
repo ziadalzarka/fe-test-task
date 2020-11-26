@@ -1,0 +1,25 @@
+.cell {
+  width: 120px;
+  height: 120px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.border-top {
+  border-top: 1px solid white;
+}
+
+.border-bottom {
+  border-bottom: 1px solid white;
+}
+
+.border-right {
+  border-right: 1px solid white;
+}
+
+.border-left {
+  border-left: 1px solid white;
+}

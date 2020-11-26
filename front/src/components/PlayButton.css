@@ -1,0 +1,23 @@
+button {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+button.play {
+  letter-spacing: 0.05em;
+  font-size: 3em;
+  padding: 0.25em 1.5em;
+  border: 3px solidwhite;
+  border: 3px solid white;
+  transition: transform 0.1s ease;
+}
+
+button.play:hover {
+  transform: scale(1.05);
+}
+
+button.play:active {
+  transform: scale(1);
+}
