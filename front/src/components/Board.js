@@ -1,9 +1,9 @@
 import classNames from "classnames";
-import React, { useCallback, useEffect, useMemo, useState } from "react";
-import "./Board.css";
-import { queryCache, useMutation, useQuery } from "react-query";
-import { getGame, makeMove } from "../api/game";
+import React, { useCallback, useMemo, useState } from "react";
 import { ImSpinner2 } from "react-icons/im";
+import { queryCache, useMutation, useQuery } from "react-query";
+import { makeMove } from "../api/game";
+import "./Board.css";
 
 export function Cell({
   left,

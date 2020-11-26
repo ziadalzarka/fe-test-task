@@ -1,11 +1,10 @@
+import axios from "axios";
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
 import App from "./App";
-import reportWebVitals from "./reportWebVitals";
-import axios from "axios";
 import config from "./config";
-import ScreensContext from "./ScreensContext";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
 
 axios.defaults.baseURL = config.api;
 
