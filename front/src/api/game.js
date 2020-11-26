@@ -37,3 +37,13 @@ export const resetGame = () => {
       throw new Error("Cannot connect to server...");
     });
 };
+
+export const calculateWinner = (winner) => {
+  if (winner === "ai") {
+    return "You lose!";
+  }
+  if (winner === "player") {
+    return "You win!";
+  }
+  return "Tie!";
+};

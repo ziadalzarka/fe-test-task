@@ -1,0 +1,28 @@
+.score-list {
+  list-style: none;
+}
+
+.score-item {
+  border: 2px solid white;
+  padding: 0.5em 8em 0.5em 0.5em;
+  margin-bottom: 1em;
+}
+
+.score-item p {
+  margin: 0;
+}
+
+.score-holder {
+  font-size: 2em;
+  color: white;
+}
+
+.score-time {
+  font-size: 1em;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}

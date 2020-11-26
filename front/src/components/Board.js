@@ -64,9 +64,7 @@ export function Cell({
 }
 
 export default function Board() {
-  const { error, data, isLoading, isSuccess } = useQuery("game", () =>
-    getGame()
-  );
+  const { error, data, isLoading, isSuccess } = useQuery("game");
 
   const board = useMemo(() => data?.result, [data]);
 

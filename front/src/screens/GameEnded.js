@@ -2,7 +2,7 @@ import React, { useCallback, useMemo } from "react";
 import { ImSpinner2 } from "react-icons/im";
 import { queryCache, useQuery } from "react-query";
 import GameMenu from "../components/GameMenu";
-import { playAgain } from "./../api/game";
+import { calculateWinner, playAgain } from "./../api/game";
 import "./Game.css";
 import Scores from "./../components/Scores";
 
@@ -11,13 +11,7 @@ export default function GameEnded() {
 
   const winner = useMemo(() => {
     if (board) {
-      if (board.result.winner === "ai") {
-        return "You lose!";
-      }
-      if (board.result.winner === "player") {
-        return "You win!";
-      }
-      return "Tie!";
+      return calculateWinner(board.result.winner);
     }
     return null;
   }, [board]);
@@ -37,7 +31,12 @@ export default function GameEnded() {
 
   return (
     <>
-      <GameMenu title={winner} action="Play Again" onAction={handlePlayAgain}>
+      <GameMenu
+        title={winner}
+        action="Play Again"
+        onAction={handlePlayAgain}
+        scoreboard
+      >
         <Scores />
       </GameMenu>
     </>

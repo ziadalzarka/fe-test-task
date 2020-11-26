@@ -5,6 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import axios from "axios";
 import config from "./config";
+import ScreensContext from "./ScreensContext";
 
 axios.defaults.baseURL = config.api;
 
